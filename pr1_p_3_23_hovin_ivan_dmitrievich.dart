@@ -21,9 +21,9 @@ void main(List<String> arguments) {
   print("$lastName $name $middleName, $age лет, $gender пол");
   print("Студент группы $group $shortCollege");
   print("($fullCollege)");
-  print("***************************");
+  print("*"*30);
   print("Конспект по некоторым типам объектов в языке программирования Dart.");
-  print(abstract);
+  print(abstract.trim());
   var runeNum = abstract.contains("Rune");
   var ifRune = "";
   if (runeNum == false) {
@@ -33,13 +33,16 @@ void main(List<String> arguments) {
     ifRune = "присутствует";
   }
   print("Упоминание слова 'Rune' в конспекте $ifRune");
-  print("***************************");
+  print("*"*30);
   var newKnownLang = Set<String>.from([...knownLang, ...futureLang]).toList();
   var newFutureLang = Set<String>.from([...knownLang, ...futureLang]).toList();
   newKnownLang.removeRange(knownLang.length, newKnownLang.length);
   newFutureLang.removeRange(0, knownLang.length);
-  print("Изученные языки программирования: $newKnownLang");
-  print("Планируемые для изучения языки программирования: $newFutureLang");
+  print("Изученные языки программирования: ");
+  print(newKnownLang.join(', '));
+  print("Планируемые для изучения языки программирования: ");
+  print(newFutureLang.join(', '));
+  print("*"*30);
   print("Переменные, использующиеся в программе:");
   print("lastName, name, middleName, age, gender, group, shortCollege, fullCollege, knownLang, futureLang, abstract, runeNum, ifRune, newKnownLang, newFutureLang");
 
